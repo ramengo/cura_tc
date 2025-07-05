@@ -4,10 +4,10 @@ materials = ['PETG', 'PLA', 'GFF', 'CFF', 'TPU']
 
 # Definizione dei nomi e dei layer height in base al nozzle
 names_and_layers = {
-    '0.6': [('fine', '0.15'), ('standard', '0.3'), ('draft', '0.45')],
-    '0.8': [('standard', '0.3'), ('draft', '0.45'), ('superdraft', '0.6')],
-    '1.0': [('draft', '0.45'), ('superdraft', '0.6'), ('fast', '0.75')],
-    '1.2': [('superdraft', '0.6'), ('fast', '0.75'), ('ultrafast', '0.9')]
+    '0.6': [('Fine', '0.15'), ('Standard', '0.3'), ('Draft', '0.45')],
+    '0.8': [('Standard', '0.3'), ('Draft', '0.45'), ('Superdraft', '0.6')],
+    '1.0': [('Draft', '0.45'), ('Superdraft', '0.6'), ('Fast', '0.75')],
+    '1.2': [('Superdraft', '0.6'), ('Fast', '0.75'), ('Ultrafast', '0.9')]
 }
 
 # Funzione per generare il contenuto del file di configurazione
@@ -16,12 +16,14 @@ def generate_config_content(nozzle, material, name, layer_height, print_speed):
 version = 4
 name = {name} Quality
 definition = fabbrix_elemento_tc
+
 [metadata]
 setting_version = 25
 type = quality
 quality_type = {name.lower()}
 material = fabbrix_{material.lower()}
 variant = {nozzle}mm Nozzle
+
 [values]
 layer_height = {layer_height}
 layer_height_0 = 0.3
@@ -115,7 +117,7 @@ for nozzle in nozzles:
     for material in materials:
         for name, layer_height in names_and_layers[nozzle]:
             print_speed = print_speeds[nozzle][layer_height]
-            filename = f"elemento_tc_{nozzle}_{material}_{name}.inst.cfg"
+            filename = f"elemento_tc_{nozzle}_{material}_{name.lower()}.inst.cfg"
             content = generate_config_content(nozzle, material, name, layer_height, print_speed)
             filepath = os.path.join('config_files', filename)
             with open(filepath, 'w') as file:

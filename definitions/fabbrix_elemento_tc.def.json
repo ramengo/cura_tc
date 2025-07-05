@@ -2,7 +2,7 @@
     "name": "Fabbrix Elemento TC",
     "id": "fabbrix_elemento_tc",
     "version": 2,
-    "inherits": "fabbrix_printer",
+    "inherits": "fdmprinter",
 
     "metadata": {
         "author":                          "Fabbrix",
@@ -16,8 +16,8 @@
         "has_machine_quality":             true,
         "has_materials":                   true,
         "has_variants":                    true,
-        "preferred_material":              "fabbrix_pla",
-        "preferred_quality_type":          "standard",
+        "preferred_material":              "fabbrix_petg",
+        "preferred_quality_type":          "fine",
         "preferred_variant_name":          "0.6mm Nozzle",
         "machine_extruder_trains":         { "0": "fabbrix_extruder_tc_0", "1": "fabbrix_extruder_tc_1" }
     },
