@@ -1,0 +1,205 @@
+{
+    "name": "Fabbrix Elemento TC",
+    "id": "fabbrix_elemento_tc",
+    "version": 2,
+    "inherits": "fabbrix_printer",
+
+    "metadata": {
+        "author":                          "Fabbrix",
+        "visible":                         true,
+        "manufacturer":                    "Fabbrix",
+        "category":                        "Fabbrix",
+        "file_formats":                    "text/x-gcode",
+        "icon":                            "icon_ultimaker2",
+        "platform":                        "elementotc.stl",
+        "platform_offset":                 [-15, -60, 0 ],
+        "has_machine_quality":             true,
+        "has_materials":                   true,
+        "has_variants":                    true,
+        "preferred_material":              "fabbrix_pla",
+        "preferred_quality_type":          "standard",
+        "preferred_variant_name":          "0.6mm Nozzle",
+        "machine_extruder_trains":         { "0": "fabbrix_extruder_tc_0", "1": "fabbrix_extruder_tc_1" }
+    },
+
+    "overrides": {
+		"machine_name":                    { "default_value": "Fabbrix Elemento TC" },
+		"machine_gcode_flavor":            { "default_value": "RepRap (RepRap)" },
+        "machine_start_gcode":             { "default_value": "M190 S{material_bed_temperature}\nM290 S0 R0\nM561\nG32\nG29 S1 P\"scan_leveling.csv\"\nG1 Z55 F1000\nG21 ;metric values\nG90 ;absolute positioning\nM83 ;set extruder to absolute mode\nM107 ;start with the fan off\nG92 E0 ;zero the extruded length\nM104 T{initial_extruder_nr} S{material_print_temperature_layer_0}\nM109 T{initial_extruder_nr} S{material_print_temperature_layer_0}\nG92 E0 ; reset extruder\nT{initial_extruder_nr}\nM98 P\"0:/macros/Calibration/inputshaping.g\"\nG92 E0.0 ; reset extruder\nG1 Z3 F400\nG1 X550 Y-2 Z1 F3000.0 ; position 10mm down from the lower left of the first layer\nG1 X650 Y-2 E50 F1000.0 ; extrude 30mm of filament in the x direction\nG92 E0.0 ; reset extruder\nG1 Z4 F400 ; small retraction\nM117 Printing...\nM572 D0 S{material_pressure_advance_factor}\nM572 D1 S{material_pressure_advance_factor}" },
+        "machine_end_gcode":               { "default_value": "G1 Z620\nG90 ;Absolute positionning\nG1 X0 Y0 ;Present print\nM106 S0 ;Turn-off fan\nM104 T0 S0 ;Turn-off hotend\nM104 T1 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84 X Y E ;Disable all steppers but Z\nM98 P\"endPrint.g\"" },
+        "machine_extruder_count":          { "default_value": 2 },
+        "machine_heated_bed":              { "default_value": true },
+        "machine_heated_build_volume":     { "default_value": true },
+        "machine_width":                   { "default_value": 1100 },
+        "machine_height":                  { "default_value": 600 },
+        "machine_depth":                   { "default_value": 605 },
+        "machine_center_is_zero":          { "default_value": false},
+        "prime_tower_position_x":          { "default_value": -30 },
+		"prime_tower_position_y":          { "default_value": 0 },
+        "machine_max_feedrate_x": { "value": 300 },
+        "machine_max_feedrate_y": { "value": 300 },
+        "machine_max_feedrate_z": { "value": 50 },
+        "machine_max_feedrate_e": { "value":  250},
+        "machine_max_acceleration_x": { "value": 2000 },
+        "machine_max_acceleration_y": { "value": 2000 },
+        "machine_max_acceleration_z": { "value": 600 },
+        "machine_max_acceleration_e": { "value": 500 },
+        "machine_acceleration": { "value": 1500 },
+        "machine_max_jerk_xy": { "value": 10 },
+        "machine_max_jerk_z": { "value": 5 },
+        "machine_max_jerk_e": { "value": 15 },
+        "machine_heated_bed": { "default_value": true },
+        "machine_heated_build_volume": { "default_value": true },
+        "material_diameter": { "default_value": 2.85 },
+        "acceleration_print": { "value": 10000 },
+        "acceleration_travel": { "value": 14000 },
+        "acceleration_travel_layer_0": { "value": "acceleration_travel" },
+        "jerk_travel": { "value": "jerk_print" },
+        "jerk_travel_layer_0": { "value": "jerk_travel" },
+        "machine_start_gcode_first" : {"value":true},
+        "relative_extrusion": {"value":true},
+        "retraction_combing": {"value": "all"},
+        "support_z_distance": { "value": "layer_height" },
+        "material_pressure_advance_factor":
+        {
+            "enabled": true,
+            "value": 0.06
+        },
+        "skirt_brim_speed":
+        {
+            "maximum_value_warning": 800
+        },
+        "speed_flooring":
+        {
+            "maximum_value_warning": 100
+        },
+        "speed_infill":
+        {
+            "maximum_value_warning": 250
+        },
+        "speed_ironing":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_layer_0":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_prime_tower":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_print":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_print_layer_0":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_roofing":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_support":
+        {
+            "maximum_value_warning": 200
+        },
+        "speed_support_bottom":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_support_infill":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_support_interface":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_support_roof":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_topbottom":
+        {
+            "maximum_value_warning": 100
+        },
+        "speed_travel":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_travel_layer_0":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_0":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_0_flooring":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_0_roofing":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_x":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_x_flooring":
+        {
+            "maximum_value_warning": 300
+        },
+        "speed_wall_x_roofing":
+        {
+            "maximum_value_warning": 300
+        },
+        "support_angle": { "value": 60 },
+        "arcwelder_enable" : {"value":"True"},
+        "exclude_materials": [
+            "dsm_",
+            "Essentium_",
+            "imade3d_",
+            "chromatik_",
+            "3D-Fuel_",
+            "bestfilament_",
+            "eazao_",
+            "emotiontech_",
+            "eryone_",
+            "eSUN_",
+            "Extrudr_",
+            "fabtotum_",
+            "fdplast_",
+            "filo3d_",
+            "generic_",
+            "goofoo_",
+            "ideagen3D_",
+            "imade3d_",
+            "innofill_",
+            "layer_one_",
+            "leapfrog_",
+            "polyflex_pla",
+            "polymax_pla",
+            "polyplus_pla",
+            "polywood_pla",
+            "redd_",
+            "tizyx_",
+            "verbatim_",
+            "Vertex_",
+            "volumic_",
+            "xyzprinting_",
+            "zyyx_pro_",
+            "octofiber_",
+            "fiberlogy_",
+            "ultimaker_nylon_175",
+            "ultimaker_metallic_pla_175"
+        ]
+	}	
+}
