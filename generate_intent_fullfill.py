@@ -67,7 +67,7 @@ intent_values = {
         'meshfix_maximum_resolution': '0.916',
         'meshfix_maximum_travel_resolution': '1.2',
         'material_pressure_advance_factor': '0.06',
-        'material_print_temperature': '=material_print_temperature + 30',
+        'material_print_temperature': '240',
         'cool_min_layer_time': '10',
         'cool_min_temperature': '220',
         'support_bottom_enable': 'False',
