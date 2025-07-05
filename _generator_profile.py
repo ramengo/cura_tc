@@ -1,15 +1,31 @@
-[general]
+# Definizione dei parametri
+nozzles = ['0.6', '0.8', '1.0', '1.2']
+materials = ['PETG', 'PLA', 'GFF', 'CFF', 'TPU']
+
+# Definizione dei nomi e dei layer height in base al nozzle
+names_and_layers = {
+    '0.6': [('fine', '0.15'), ('standard', '0.3'), ('draft', '0.45')],
+    '0.8': [('standard', '0.3'), ('draft', '0.45'), ('superdraft', '0.6')],
+    '1.0': [('draft', '0.45'), ('superdraft', '0.6'), ('fast', '0.75')],
+    '1.2': [('superdraft', '0.6'), ('fast', '0.75'), ('ultrafast', '0.9')]
+}
+
+# Funzione per generare il contenuto del file di configurazione
+def generate_config_content(nozzle, material, name, layer_height):
+    return f"""[general]
 version = 4
-name = fine Quality
+name = {name} Quality
 definition = fabbrix_elemento_tc
+
 [metadata]
 setting_version = 25
 type = quality
-quality_type = fine
-material = fabbrix_petg
-variant = 0.6mm Nozzle
+quality_type = {name.lower()}
+material = fabbrix_{material.lower()}
+variant = {nozzle}mm Nozzle
+
 [values]
-layer_height = 0.15
+layer_height = {layer_height}
 layer_height_0 = 0.3
 acceleration_enabled = True
 jerk_enabled = True
@@ -34,7 +50,7 @@ skin_overlap = 50
 skin_preshrink = 2.2
 skirt_line_count = 0
 z_seam_corner = z_seam_corner_outer
-speed_print = 120
+speed_print = 100
 speed_infill = =speed_print
 speed_layer_0 = =math.ceil(speed_print * 20 / 60)
 speed_topbottom = =math.ceil(speed_print * 30 / 60)
@@ -80,4 +96,23 @@ switch_extruder_retraction_amount = 1.5
 switch_extruder_retraction_speeds = 10
 speed_support_roof = =math.ceil(speed_print * 20 / 60)
 support_z_distance = =layer_height
-support_offset = 3
+support_offset = 3"""
+
+# Generazione dei file di configurazione
+import os
+
+# Creazione della directory per salvare i file
+os.makedirs('config_files', exist_ok=True)
+
+# Generazione dei file
+for nozzle in nozzles:
+    for material in materials:
+        for name, layer_height in names_and_layers[nozzle]:
+            filename = f"elemento_tc_{nozzle}_{material}_{name}.inst.cfg"
+            content = generate_config_content(nozzle, material, name, layer_height)
+            filepath = os.path.join('config_files', filename)
+            with open(filepath, 'w') as file:
+                file.write(content)
+
+# Lista dei file generati
+os.listdir('config_files')
