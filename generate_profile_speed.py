@@ -14,7 +14,7 @@ names_and_layers = {
 def generate_config_content(nozzle, material, name, layer_height, print_speed):
     return f"""[general]
 version = 4
-name = {name} Quality
+name = {name.capitalize()} Quality
 definition = fabbrix_elemento_tc
 
 [metadata]
@@ -51,7 +51,7 @@ skin_preshrink = 2.2
 skirt_line_count = 0
 z_seam_corner = z_seam_corner_outer
 speed_print = {print_speed}
-speed_infill = =speed_print
+speed_infill = {print_speed}
 speed_layer_0 = =math.ceil(speed_print * 20 / 60)
 speed_topbottom = =math.ceil(speed_print * 30 / 60)
 speed_wall = =math.ceil(speed_print * 30 / 60)
