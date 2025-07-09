@@ -1,0 +1,40 @@
+{
+    "name": "Fabbrix Elemento V2",
+    "id": "fabbrix_elemento_v2",
+    "version": 2,
+    "inherits": "fabbrix_printer",
+
+    "metadata": {
+        "author":                          "Fabbrix",
+        "visible":                         true,
+        "manufacturer":                    "Fabbrix",
+        "category":                        "Fabbrix",
+        "file_formats":                    "text/x-gcode",
+        "icon":                            "icon_ultimaker2",
+        "platform":                        "fabbrix_elemento_v2.stl",
+        "platform_offset":                 [0, 0, 0 ],
+        "has_machine_quality":             true,
+        "has_materials":                   true,
+        "has_variants":                    true,
+        "preferred_material":              "fabbrix_plaht",
+        "preferred_quality_type":          "standard",
+        "preferred_variant_name":          "0.6mm Nozzle",
+        "machine_extruder_trains":         { "0": "fabbrix_extruder_0", "1": "fabbrix_extruder_1" }
+    },
+
+    "overrides": {
+		"machine_name":                    { "default_value": "Fabbrix Elemento v2" },
+		"machine_gcode_flavor":            { "default_value": "RepRap (RepRap)" },
+        "machine_start_gcode":             { "default_value": "M190 S{material_bed_temperature}\nM104 S{material_print_temperature}\nM109 S{material_print_temperature}\nM98 P\"startPrint.g\" \nM83 ;absolute extrusion mode\nG21 ;metric values\nG90 ;absolute positioning\nM83 ;set extruder to absolute mode\nM107 ;start with the fan off\nG28; Home Axis\nT{initial_extruder_nr}\nG29 S1; Z-Probe the bed (requires Z-Probe!)\nG1 Z5.0 F9000 ;move the head 5mm up for CYA clearance\nG92 E0 ;zero the extruded length\nM117 Cleaning...;Put Cleaning message on screen\nG1 X-20 Y0 F4000 ; move half way along the front edge\nG1 Z1 ; move nozzle close to bed\nM109 S{material_print_temperature} ; heat nozzle to 200 degC and wait until reached\nG4 P5000 ; wait 10 seconds for nozzle length to stabilize\nG1 E10 F200; extrude 10 mm of filament\nG1 Z15 F12000 E5 ; move 15 mm up, fast, while extruding 5mm\nG92 E0 ; reset extruder\nM117 Printing...;Put printing message on LCD screen\n" },
+        "machine_end_gcode":               { "default_value": "G1 X5 Y5 F3000 ;Wipe out\nT0\nG90 ;Absolute positionning\nG1 X0 Y0 ;Present print\nM106 S0 ;Turn-off fan\nM104 T0 S0 ;Turn-off hotend\nM104 T1 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84 X Y E ;Disable all steppers but Z\nM98 P\"endPrint.g\"" },
+        "machine_extruder_count":          { "default_value": 2 },
+        "machine_heated_bed":              { "default_value": true },
+        "machine_heated_build_volume":     { "default_value": true },
+        "machine_width":                   { "default_value": 1000 },
+        "machine_height":                  { "default_value": 530 },
+        "machine_depth":                   { "default_value": 560 },
+        "machine_center_is_zero":          { "default_value": false},
+        "prime_tower_position_x":          { "default_value": -30 },
+		"prime_tower_position_y":          { "default_value": 0 }
+	}	
+}

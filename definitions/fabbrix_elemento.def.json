@@ -1,0 +1,40 @@
+{
+    "name": "Fabbrix Elemento",
+    "id": "fabbrix_elemento",
+    "version": 2,
+    "inherits": "fabbrix_printer",
+
+    "metadata": {
+        "author":                          "Fabbrix",
+        "visible":                         true,
+        "manufacturer":                    "Fabbrix",
+        "category":                        "Fabbrix",
+        "file_formats":                    "text/x-gcode",
+        "icon":                            "icon_ultimaker2",
+        "platform":                        "fabbrix_elemento_low_platform.stl",
+        "platform_offset":                 [0, -18, 0 ],
+        "has_machine_quality":             true,
+        "has_materials":                   true,
+        "has_variants":                    true,
+        "preferred_material":              "fabbrix_pla",
+        "preferred_quality_type":          "draft",
+        "preferred_variant_name":          "0.6mm Nozzle",
+        "machine_extruder_trains":         { "0": "fabbrix_extruder_0", "1": "fabbrix_extruder_1" }
+    },
+
+    "overrides": {
+		"machine_name":                    { "default_value": "Fabbrix Elemento" },
+		"machine_gcode_flavor":            { "default_value": "Marlin" },
+        "machine_start_gcode":             { "default_value": "G28\nT0\nG21\nG90\nM355 P255\nM106 S0\nM420 S1 Z5\nM412 S0 H0\nM530 S1\nM83\n" },
+        "machine_end_gcode":               { "default_value": "G1 X5 Y5 F3000 ;Wipe out\nG90 ;Absolute positionning\nG1 X0 Y0 ;Present print\nM106 S0 ;Turn-off fan\nM104 T0 S0 ;Turn-off hotend\nM104 T1 S0 ;Turn-off hotend\nM140 S0 ;Turn-off bed\nM84 X Y E ;Disable all steppers but Z\n" },
+        "machine_extruder_count":          { "default_value": 2 },
+        "machine_heated_bed":              { "default_value": true },
+        "machine_heated_build_volume":     { "default_value": true },
+        "machine_width":                   { "default_value": 1000 },
+        "machine_height":                  { "default_value": 530 },
+        "machine_depth":                   { "default_value": 560 },
+        "machine_center_is_zero":          { "default_value": false},
+        "prime_tower_position_x":          { "default_value": -30 },
+		"prime_tower_position_y":          { "default_value": 0 }
+	}	
+}

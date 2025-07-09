@@ -2,7 +2,7 @@
     "name": "Fabbrix Elemento TC",
     "id": "fabbrix_elemento_tc",
     "version": 2,
-    "inherits": "fdmprinter",
+    "inherits": "fabbrix_printer",
 
     "metadata": {
         "author":                          "Fabbrix",

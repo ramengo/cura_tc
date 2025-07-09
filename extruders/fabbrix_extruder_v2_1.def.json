@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "name": "T1",
+    "inherits": "fdmextruder",
+    "metadata": {
+        "machine": "fabbrix_elemento_v2",
+        "position": "1"
+    },
+
+    "overrides": {
+        "extruder_nr":               { "default_value": 1 },
+        "material_diameter":         { "default_value": 2.85 },
+        "machine_nozzle_offset_x":   { "default_value": 0.0 },
+        "machine_nozzle_offset_y":   { "default_value": 0.0 },
+        "machine_extruder_cooling_fan_number":  { "default_value": 2 } 
+    }
+}
