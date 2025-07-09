@@ -16,7 +16,7 @@
         "has_machine_quality":             true,
         "has_materials":                   true,
         "has_variants":                    true,
-        "preferred_material":              "fabbrix_pla",
+        "preferred_material":              "fabbrix_petg",
         "preferred_quality_type":          "standard",
         "preferred_variant_name":          "0.6mm Nozzle",
         "machine_extruder_trains":         { "0": "fabbrix_extruder_tc_0", "1": "fabbrix_extruder_tc_1" }
@@ -48,8 +48,6 @@
         "machine_max_jerk_xy": { "value": 10 },
         "machine_max_jerk_z": { "value": 5 },
         "machine_max_jerk_e": { "value": 15 },
-        "machine_heated_bed": { "default_value": true },
-        "machine_heated_build_volume": { "default_value": true },
         "material_diameter": { "default_value": 2.85 },
         "acceleration_print": { "value": 10000 },
         "acceleration_travel": { "value": 14000 },
@@ -59,171 +57,7 @@
         "machine_start_gcode_first" : {"value":true},
         "relative_extrusion": {"value":true},
         "support_z_distance": { "value": "layer_height" },
-        "material_pressure_advance_factor":
-        {
-            "enabled": true,
-            "value": 0.055
-        },
-        "skirt_brim_speed":
-        {
-            "maximum_value_warning": 800,
-            "value": "speed_layer_0"
-        },
-        "speed_flooring":
-        {
-            "maximum_value_warning": 100,
-            "value": "speed_roofing"
-        },
-        "speed_infill":
-        {
-            "maximum_value_warning": 250,
-            "value": "speed_print"
-        },
-        "speed_ironing":
-        {
-            "maximum_value_warning": 300,
-            "value": 20
-        },
-        "speed_layer_0":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_prime_tower":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_print":
-        {
-            "maximum_value_warning": 300,
-            "value": 150
-        },
-        "speed_print_layer_0":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_layer_0"
-        },
-        "speed_roofing":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_support":
-        {
-            "maximum_value_warning": 200,
-            "value": "speed_wall"
-        },
-        "speed_support_bottom":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_support_interface"
-        },
-        "speed_support_infill":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_support"
-        },
-        "speed_support_interface":
-        {
-            "maximum_value_warning": 300,
-            "value": 80
-        },
-        "speed_support_roof":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_support_interface"
-        },
-        "speed_topbottom":
-        {
-            "maximum_value_warning": 100,
-            "value": "speed_print"
-        },
-        "speed_travel":
-        {
-            "maximum_value": 350,
-            "maximum_value_warning": 300,
-            "value": 300
-        },
-        "speed_travel_layer_0":
-        {
-            "maximum_value": 200,
-            "maximum_value_warning": 300,
-            "value": 150
-        },
-        "speed_wall":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_wall_0":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_wall_0_flooring":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall_0_roofing"
-        },
-        "speed_wall_0_roofing":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "speed_wall_x":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_print"
-        },
-        "speed_wall_x_flooring":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall_x_roofing"
-        },
-        "speed_wall_x_roofing":
-        {
-            "maximum_value_warning": 300,
-            "value": "speed_wall"
-        },
-        "support_angle": { "value": 60 },
-        "exclude_materials": [
-            "dsm_",
-            "Essentium_",
-            "imade3d_",
-            "chromatik_",
-            "3D-Fuel_",
-            "bestfilament_",
-            "eazao_",
-            "emotiontech_",
-            "eryone_",
-            "eSUN_",
-            "Extrudr_",
-            "fabtotum_",
-            "fdplast_",
-            "filo3d_",
-            "generic_",
-            "goofoo_",
-            "ideagen3D_",
-            "imade3d_",
-            "innofill_",
-            "layer_one_",
-            "leapfrog_",
-            "polyflex_pla",
-            "polymax_pla",
-            "polyplus_pla",
-            "polywood_pla",
-            "redd_",
-            "tizyx_",
-            "verbatim_",
-            "Vertex_",
-            "volumic_",
-            "xyzprinting_",
-            "zyyx_pro_",
-            "octofiber_",
-            "fiberlogy_",
-            "ultimaker_nylon_175",
-            "ultimaker_metallic_pla_175"
-        ]
+        "acceleration_enabled" : {"value":true},
+        "jerk_enabled" : {"value":true}
 	}	
 }

@@ -4,7 +4,7 @@
         "label": "Arc Welder",
         "description": "Convert multiple G0/G1 arc segments into G2/G3 arc movements.",
         "type": "bool",
-        "default_value": false,
+        "default_value": true,
         "settable_per_mesh": false,
         "settable_per_extruder": false,
         "settable_per_meshgroup": false
