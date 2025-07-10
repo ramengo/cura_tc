@@ -37,6 +37,7 @@
     <setting key="break speed">25</setting>
     <setting key="print temperature">260</setting>
     <setting key="adhesion tendency">0</setting>
+    <machine>
       <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento V2" />
       <hotend id="0.6mm Nozzle">
         <setting key="hardware compatible">no</setting>
