@@ -13,7 +13,7 @@
     <GUID>8274a9b2-9978-46c1-8de8-32e23ffe3b02</GUID>
   </metadata>
   <properties>
-    <density>0.9</density>
+    <density>1.08</density>
     <diameter>1.75</diameter>
   </properties>
   <settings>
@@ -38,184 +38,25 @@
     <setting key="print temperature">220</setting>
     <setting key="adhesion tendency">0</setting>
     <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 3" />
-      <setting key="print cooling">100</setting>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">5</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 3 Extended" />
-      <setting key="print cooling">100</setting>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">5</setting>
-      </hotend>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 2+" />
-      <hotend id="0.4 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.6 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.8 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.25 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker Original" />
-      <setting key="standby temperature">150</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 2 Extended" />
-      <setting key="processing temperature graph">
-        <point flow="2.0" temperature="180.0" />
-        <point flow="10.0" temperature="230.0" />
-      </setting>
-      <setting key="standby temperature">150</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 2 Go" />
-      <setting key="processing temperature graph">
-        <point flow="2.0" temperature="180.0" />
-        <point flow="10.0" temperature="230.0" />
-      </setting>
-      <setting key="standby temperature">150</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 2" />
-      <setting key="processing temperature graph">
-        <point flow="2.0" temperature="180.0" />
-        <point flow="10.0" temperature="230.0" />
-      </setting>
-      <setting key="standby temperature">150</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker 2 Extended+" />
-      <hotend id="0.4 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.25 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.8 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.6 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S3" />
-      <setting key="print cooling">100</setting>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="CC 0.6">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Ultimaker B.V." product="Ultimaker S5" />
-      <setting key="print cooling">100</setting>
-      <hotend id="AA 0.25">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-      <hotend id="BB 0.8">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="CC 0.6">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">6.5</setting>
-        <setting key="standby temperature">100</setting>
-        <cura:setting key="material_crystallinity">true</cura:setting>
-      </hotend>
-      <hotend id="BB 0.4">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="AA 0.8">
-        <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">5</setting>
-        <setting key="standby temperature">100</setting>
-      </hotend>
-    </machine>
-    <machine>
       <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento V2" />
       <hotend id="0.6mm Nozzle">
         <setting key="hardware compatible">no</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
       <hotend id="0.8mm Nozzle">
         <setting key="hardware compatible">no</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.0mm Nozzle">
         <setting key="hardware compatible">no</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.2mm Nozzle">
         <setting key="hardware compatible">no</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
     </machine>
@@ -223,22 +64,22 @@
       <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento TC" />
       <hotend id="0.6mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
       <hotend id="0.8mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.0mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.2mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">1.5</setting>
+        <setting key="retraction amount">0.7</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
     </machine>
