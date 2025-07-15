@@ -58,6 +58,9 @@
         "relative_extrusion": {"value":true},
         "support_z_distance": { "value": "layer_height" },
         "acceleration_enabled" : {"value":true},
-        "jerk_enabled" : {"value":true}
+        "jerk_enabled" : {"value":true},
+        "prime_tower_position_x" : {"value":550},
+        "prime_tower_position_y" : {"value":15},
+        "prime_tower_size" : {"value":25}
 	}	
 }
