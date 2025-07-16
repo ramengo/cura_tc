@@ -34,8 +34,6 @@
         "machine_height":                  { "default_value": 620 },
         "machine_depth":                   { "default_value": 605 },
         "machine_center_is_zero":          { "default_value": false},
-        "prime_tower_position_x":          { "default_value": -30 },
-		"prime_tower_position_y":          { "default_value": 0 },
         "machine_max_feedrate_x": { "value": 300 },
         "machine_max_feedrate_y": { "value": 300 },
         "machine_max_feedrate_z": { "value": 50 },
