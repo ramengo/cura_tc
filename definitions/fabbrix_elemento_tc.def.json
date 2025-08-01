@@ -59,6 +59,11 @@
         "jerk_enabled" : {"value":true},
         "prime_tower_position_x" : {"value":550},
         "prime_tower_position_y" : {"value":15},
-        "prime_tower_size" : {"value":25}
+        "prime_tower_size" : {"value":25},
+        "material_pressure_advance_factor":
+        {
+            "enabled": true,
+            "value": 0.06
+        }
 	}	
 }
