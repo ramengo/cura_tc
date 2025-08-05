@@ -47,8 +47,8 @@ speed_support_roof = =math.ceil(speed_print * 60 / 100)
 speed_support_bottom = =math.ceil(speed_print * 60 / 100) 
 speed_prime_tower = =math.ceil(speed_print * 50 / 100) 
 speed_travel = 300 
-speed_layer_0 = =math.ceil(speed_print * 20 / 100) 
-speed_print_layer_0 = =math.ceil(speed_print * 20 / 100) 
+speed_layer_0 = 25
+speed_print_layer_0 = 25
 speed_travel_layer_0 = =math.ceil(speed_travel * 50 / 100) 
-skirt_brim_speed = =math.ceil(speed_print * 20 / 100) 
+skirt_brim_speed = 25
 speed_z_hop = 5
