@@ -13,7 +13,7 @@
     <GUID>8274a9b2-9978-46c1-8de8-32e23ffe3b02</GUID>
   </metadata>
   <properties>
-    <density>1.08</density>
+    <density>1.16</density>
     <diameter>1.75</diameter>
   </properties>
   <settings>
@@ -35,7 +35,7 @@
     <setting key="standby temperature">175</setting>
     <setting key="build volume temperature">28</setting>
     <setting key="break speed">25</setting>
-    <setting key="print temperature">220</setting>
+    <setting key="print temperature">225</setting>
     <setting key="adhesion tendency">0</setting>
     <machine>
       <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento V2" />
@@ -64,22 +64,22 @@
       <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento TC" />
       <hotend id="0.6mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">0.7</setting>
+        <setting key="retraction amount">1.2</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
       <hotend id="0.8mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">0.7</setting>
+        <setting key="retraction amount">1.2</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.0mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">0.7</setting>
+        <setting key="retraction amount">1.2</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
         <hotend id="1.2mm Nozzle">
         <setting key="hardware compatible">yes</setting>
-        <setting key="retraction amount">0.7</setting>
+        <setting key="retraction amount">1.2</setting>
         <setting key="standby temperature">190</setting>
       </hotend>
     </machine>
