@@ -1,0 +1,75 @@
+{
+    "name": "Fabbrix Elemento 5 Tool",
+    "id": "fabbrix_elemento_5tool",
+    "version": 2,
+    "inherits": "fabbrix_printer",
+
+    "metadata": {
+        "author":                          "Fabbrix",
+        "visible":                         true,
+        "manufacturer":                    "Fabbrix",
+        "category":                        "Fabbrix",
+        "file_formats":                    "text/x-gcode",
+        "icon":                            "icon_ultimaker2",
+        "platform":                        "elementotc.stl",
+        "platform_offset":                 [-15, -60, 0 ],
+        "has_machine_quality":             true,
+        "has_materials":                   true,
+        "has_variants":                    true,
+        "preferred_material":              "fabbrix_petg",
+        "preferred_quality_type":          "standard",
+        "preferred_variant_name":          "0.6mm Nozzle",
+        "machine_extruder_trains":         { 
+            "0": "fabbrix_extruder_5tool_0", 
+            "1": "fabbrix_extruder_5tool_1",
+            "2": "fabbrix_extruder_5tool_2",
+            "3": "fabbrix_extruder_5tool_3",
+            "4": "fabbrix_extruder_5tool_4"
+        }
+    },
+
+    "overrides": {
+		"machine_name":                    { "default_value": "Fabbrix Elemento 5 Tool" },
+		"machine_gcode_flavor":            { "default_value": "RepRap (RepRap)" },
+        "machine_start_gcode":             { "default_value": ";Extruder Enabled: {extruders_enabled_count}\n;Initial Extruder: {initial_extruder_nr}\nM104 T0 S{material_print_temperature_layer_0 - 50, 0}\nM104 T1 S{material_print_temperature_layer_0 - 50, 1}\nM104 T2 S{material_print_temperature_layer_0 - 50, 2}\nM104 T3 S{material_print_temperature_layer_0 - 50, 3}\nM104 T4 S{material_print_temperature_layer_0 - 50, 4}\nM98 P\"0:/macros/pei_check.g\"\nM98 P\"0:/macros/door_check.g\"\nM98 P\"0:/macros/Calibration/inputshaping.g\"\nM190 S{material_bed_temperature}\nG32\nM18 C\nG30\nM98 P\"0:/macros/Fabbrix/Bed/Scanning Bed.g\"\nG1 Z55 F1000\nG21\nG90\nM83\nM107\nG29 S1 P\"scan_leveling.csv\"\nG92 E0\n{if (extruders_enabled_count >= 2 )}\nM109 T0 S{material_print_temperature_layer_0, 0}\nM109 T1 S{material_print_temperature_layer_0, 1}\n{if (extruders_enabled_count >= 3 )}\nM109 T2 S{material_print_temperature_layer_0, 2}\n{endif}\n{if (extruders_enabled_count >= 4 )}\nM109 T3 S{material_print_temperature_layer_0, 3}\n{endif}\n{if (extruders_enabled_count >= 5 )}\nM109 T4 S{material_print_temperature_layer_0, 4}\n{endif}\nM572 D0 S{material_pressure_advance_factor, 0}\nM572 D1 S{material_pressure_advance_factor, 1}\n{if (extruders_enabled_count >= 3 )}\nM572 D2 S{material_pressure_advance_factor, 2}\n{endif}\n{if (extruders_enabled_count >= 4 )}\nM572 D3 S{material_pressure_advance_factor, 3}\n{endif}\n{if (extruders_enabled_count >= 5 )}\nM572 D4 S{material_pressure_advance_factor, 4}\n{endif}\nT0\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-2 Z1 F3000.0\nG1 X650 Y-2 E20 F1000.0\nG92 E0.0\nT1\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-5 Z1 F3000.0\nG1 X650 Y-5 E20 F1000.0\nG92 E0.0\n{if (extruders_enabled_count >= 3 )}\nT2\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-8 Z1 F3000.0\nG1 X650 Y-8 E20 F1000.0\nG92 E0.0\n{endif}\n{if (extruders_enabled_count >= 4 )}\nT3\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-11 Z1 F3000.0\nG1 X650 Y-11 E20 F1000.0\nG92 E0.0\n{endif}\n{if (extruders_enabled_count >= 5 )}\nT4\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-14 Z1 F3000.0\nG1 X650 Y-14 E20 F1000.0\nG92 E0.0\n{endif}\n{endif}\n{if (extruders_enabled_count == 1 )}\nT{initial_extruder_nr}\nM109 T{initial_extruder_nr} S{material_print_temperature_layer_0, (initial_extruder_nr)}\nM572 D0 S{material_pressure_advance_factor, (initial_extruder_nr)}\nG92 E0.0\nG1 Z3 F400\nG1 X550 Y-2 Z1 F3000.0\nG1 X650 Y-2 E20 F1000.0\nG92 E0.0\n{endif}\nM703\nG1 Z4 F400\nM117 Printing...\n" },
+        "machine_end_gcode":               { "default_value": "T-1\n G1 Z620\n G90 ;Absolute positionning\n M106 P0 S0 ;Turn-off fan\n M106 P1 S0 ;Turn-off fan\n M106 P2 S0 ;Turn-off fan\n M106 P3 S0 ;Turn-off fan\n M106 P4 S0 ;Turn-off fan\n G10 P0 S0 R0\nM104 T0 S0;Turn-off hotend\n G10 P1 S0 R0\nM104 T1 S0;Turn-off hotend\n G10 P2 S0 R0\nM104 T2 S0;Turn-off hotend\n G10 P3 S0 R0\nM104 T3 S0;Turn-off hotend\n G10 P4 S0 R0\nM104 T4 S0;Turn-off hotend\n M140 S0 ;Turn-off bed\n M141 S0\nM84 X Y E ;Disable all steppers but Z\n M98 P\"endPrint.g\"" },
+        "machine_extruder_count":          { "default_value": 5 },
+        "machine_heated_bed":              { "default_value": true },
+        "machine_heated_build_volume":     { "default_value": true },
+        "machine_width":                   { "default_value": 1100 },
+        "machine_height":                  { "default_value": 620 },
+        "machine_depth":                   { "default_value": 605 },
+        "machine_center_is_zero":          { "default_value": false},
+        "machine_max_feedrate_x": { "value": 300 },
+        "machine_max_feedrate_y": { "value": 300 },
+        "machine_max_feedrate_z": { "value": 25 },
+        "machine_max_feedrate_e": { "value":  160},
+        "machine_max_acceleration_x": { "value": 10000 },
+        "machine_max_acceleration_y": { "value": 10000 },
+        "machine_max_acceleration_z": { "value": 40 },
+        "machine_max_acceleration_e": { "value": 5000 },
+        "machine_acceleration": { "value": 10000 },t
+        "machine_max_jerk_xy": { "value": 10 },
+        "machine_max_jerk_z": { "value": 20 },
+        "machine_max_jerk_e": { "value": 2 },
+        "material_diameter": { "default_value": 2.85 },
+        "acceleration_print": { "value": 10000 },
+        "acceleration_travel": { "value": 10000 },
+        "acceleration_travel_layer_0": { "value": "acceleration_travel" },
+        "jerk_travel": { "value": "jerk_print" },
+        "jerk_travel_layer_0": { "value": "jerk_travel" },
+        "machine_start_gcode_first" : {"value":true},
+        "relative_extrusion": {"value":true},
+        "support_z_distance": { "value": "layer_height" },
+        "acceleration_enabled" : {"value":true},
+        "jerk_enabled" : {"value":true},
+        "prime_tower_position_x" : {"value":550},
+        "prime_tower_position_y" : {"value":15},
+        "prime_tower_size" : {"value":25},
+        "material_pressure_advance_factor":
+        {
+            "enabled": true,
+            "value": 0.06
+        }
+	}	
+}
