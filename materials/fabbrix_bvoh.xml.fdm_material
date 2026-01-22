@@ -83,5 +83,28 @@
         <setting key="standby temperature">170</setting>
       </hotend>
     </machine>
+    <machine>
+      <machine_identifier manufacturer="Fabbrix" product="Fabbrix Elemento 5 Tool" />
+      <hotend id="0.6mm Nozzle">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction amount">0.7</setting>
+        <setting key="standby temperature">170</setting>
+      </hotend>
+      <hotend id="0.8mm Nozzle">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction amount">0.7</setting>
+        <setting key="standby temperature">170</setting>
+      </hotend>
+        <hotend id="1.0mm Nozzle">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction amount">0.7</setting>
+        <setting key="standby temperature">170</setting>
+      </hotend>
+        <hotend id="1.2mm Nozzle">
+        <setting key="hardware compatible">yes</setting>
+        <setting key="retraction amount">0.7</setting>
+        <setting key="standby temperature">170</setting>
+      </hotend>
+    </machine>
   </settings>
 </fdmmaterial>
