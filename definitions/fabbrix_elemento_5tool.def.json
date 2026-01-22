@@ -48,7 +48,7 @@
         "machine_max_acceleration_y": { "value": 10000 },
         "machine_max_acceleration_z": { "value": 40 },
         "machine_max_acceleration_e": { "value": 5000 },
-        "machine_acceleration": { "value": 10000 },t
+        "machine_acceleration": { "value": 10000 },
         "machine_max_jerk_xy": { "value": 10 },
         "machine_max_jerk_z": { "value": 20 },
         "machine_max_jerk_e": { "value": 2 },
