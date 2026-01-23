@@ -18,7 +18,7 @@
         "has_variants":                    true,
         "preferred_material":              "fabbrix_plaht",
         "preferred_quality_type":          "standard",
-        "preferred_variant_name":          "0.6mm Nozzle",
+        "preferred_variant_name":          "0.6mm",
         "machine_extruder_trains":         { "0": "fabbrix_extruder_0", "1": "fabbrix_extruder_1" }
     },
 
