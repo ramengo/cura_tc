@@ -1,0 +1,10 @@
+{
+  "name": "Fabbrix Elemento TC",
+  "version": "5.12.0",
+  "author": "ramengo",
+  "description": "Profilo per la mia stampante Fabbrix ElementoTC",
+  "machine": {
+    "name": "Fabbrix Elemento TC",
+    "definition": "definitions/fabbrix_elemento_tc.def.json"
+  }
+}
