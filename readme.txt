@@ -52,3 +52,9 @@ speed_print_layer_0 = 25
 speed_travel_layer_0 = =math.ceil(speed_travel * 50 / 100) 
 skirt_brim_speed = 25
 speed_z_hop = 5
+
+
+
+quality/fabbrix/elemento_tc/elemento_tc_{0.6,0.8,1.0,1.2}_CFF_{fine,standard,draft,superdraft,fast,ultrafast}.inst.cfg
+
+setting_version\s*=\s*\d+
